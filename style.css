@@ -1,0 +1,315 @@
+/* Import the 'Roboto' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset default styles for all elements */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set 'Roboto' as the default font for the entire page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Style the entire body of the document */
+body {
+  display: flex; /* Use flex layout to center content vertically and horizontally */
+  justify-content: center; /* Center content horizontally within the body */
+  align-items: center; /* Center content vertically within the body */
+  min-height: 100vh; /* Ensure a minimum height of the viewport's height */
+  background: url("QLU9kGo.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style a container with the class 'wrapper' */
+.wrapper {
+  position: relative;
+  width: 420px;
+  height: 412px;
+  color: white;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 49, 49, 0.5);
+  border-right: 1px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+  border-left: 1px solid rgba(255, 255, 113, 0.5);
+  border-radius: 10px;
+  justify-content: space-around;
+  border: 2px solid rgb(255, 255, 255, .2);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  padding: 30px 40px;
+}
+
+/* Style the <h1> elements inside the container */
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* Style elements with the class 'input-box' inside the container */
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0; /* The first value adds margin to the top and bottom, whereas the second value adds margin to the right and left */
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: white;
+  border-radius: 40px;
+  border: 2px solid rgb(255, 255, 255, .2);
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: white;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+
+.wrapper .remember-forget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+/* Style for the remember-forget label input */
+.remember-forget label input {
+  accent-color: white;
+  margin-right: 3px;
+}
+
+/* Hover effect for remember-forget label input */
+.remember-forget label input:hover {
+  cursor: pointer;
+}
+
+/* Hover effect for remember-forget label */
+.remember-forget label:hover {
+  color: rgb(255, 255, 255, .8);
+}
+
+/* Style for the 'a' elements inside remember-forget */
+.remember-forget a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover effect for the 'a' elements inside remember-forget */
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  outline: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.4s linear;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  color: black; /* Set the button text color to white */
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Set the border style */
+}
+
+/* Hover effect for the button */
+.btn:hover {
+  color: white;
+}
+
+/* Pseudo-element for button background */
+.wrapper .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #192d8f;
+  transform-origin: 5 1;
+  z-index: -1;
+  border-radius: 40px;
+  transform: scaleX(0);
+  transition: transform 0.5s; /* Fixed the transform property */
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+/* Hover effect for the button background */
+.btn:hover::before {
+  border-radius: 40px;
+  transform: scaleX(1);
+}
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+/* Style for 'a' elements inside register-link */
+.register-link a {
+  color: 92d#18f;
+  text-decoration: none;
+}
+
+/* Hover effect for 'a' elements inside register-link */
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for colored border lines */
+span {
+  position: absolute;
+  border-radius: 100vmax;
+}
+
+.top {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent 5%,
+    white
+  );
+}
+
+.bottom {
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: linear-gradient(
+    200deg,
+    transparent 5%,
+    white
+  );
+}
+
+.right {
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 5%,
+    #192d8f
+  );
+}
+
+.left {
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    420deg,
+    transparent 5%,
+    #192d8f
+  );
+}
+
+/* Animation for the colored border lines */
+.top {
+  animation: animateTop 3s ease-in-out infinite;
+}
+
+.bottom {
+  animation: animateBottom 3s ease-in-out infinite;
+}
+
+.right {
+  animation: animateRight 3s ease-in-out infinite;
+}
+
+.left {
+  animation: animateLeft 3s ease-in-out infinite;
+}
+
+/* Keyframes for the colored border line animations */
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+  55%,
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
